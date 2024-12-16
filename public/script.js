@@ -49,8 +49,8 @@ document.getElementById('scheduler-form').addEventListener('submit', async (e) =
     e.preventDefault();
   
     const schedule = {
-        startTime: document.getElementById('startTime').value,
-        interval: document.getElementById('interval').value,
+        time: document.getElementById('startTime').value,
+        // interval: document.getElementById('interval').value,
         duration: document.getElementById('duration').value
     };
   
