@@ -4,8 +4,8 @@ async function fetchData() {
     const data = await res.json();
   
     // Update gauges
-    document.getElementById('temperature-gauge').innerText = `${data.temperature?.[data.temperature?.length - 1] || `N/A`} °C`;
-    document.getElementById('humidity-gauge').innerText = `${data.humidity[data.humidity.length - 1] || `N/A`} %`;
+    document.getElementById('temperature-gauge').innerText = `${data.temperature?.[data.temperature?.length - 2] || `N/A`} °C`;
+    document.getElementById('humidity-gauge').innerText = `${data.humidity[data.humidity.length - 2] || `N/A`} %`;
     document.getElementById('last-update').innerText = data.timestamps[0] || 'N/A';
   
     renderChart('lightChart', 'Light Intensity', data.light);
