@@ -1,9 +1,9 @@
 {
   "sensor": "BME280",
   "location": "Office",
-  "humidity": "71.00",
-  "temperature": "21.20",
-  "distance": "389.88",
+  "humidity": "33.50",
+  "temperature": "-12.00",
+  "distance": "1.97",
   "lightIntensity": "499.86",
   "pir": "0"
 }
