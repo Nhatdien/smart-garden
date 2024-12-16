@@ -49,11 +49,12 @@ document.getElementById('scheduler-form').addEventListener('submit', async (e) =
     e.preventDefault();
   
     const schedule = {
-        time: document.getElementById('startTime').value,
+        time: document.getElementById('startTime').value + ':00',
         // interval: document.getElementById('interval').value,
         duration: document.getElementById('duration').value
     };
   
+    console.log(schedule);
     const res = await fetch('/schedule', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
