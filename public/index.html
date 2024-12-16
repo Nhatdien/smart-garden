@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nông trại thông minh</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Nông trại thông minh</h1>
+  <p>Last reading: <span id="last-update">--:--</span></p>
+
+  <!-- Temperature and Humidity Gauges -->
+  <div class="gauges">
+    <div>
+      <h3>Temperature</h3>
+      <div id="temperature-gauge">-- °C</div>
+    </div>
+    <div>
+      <h3>Humidity</h3>
+      <div id="humidity-gauge">-- %</div>
+    </div>
+  </div>
+
+  <!-- Irrigation Scheduler -->
+  <h2>Hẹn giờ tưới nước</h2>
+  <form id="scheduler-form">
+    <label>Thời gian bắt đầu:</label>
+    <input type="time" id="startTime" required>
+    <label>Khoảng thời gian lặp lại (phút):</label>
+    <input type="number" id="interval" required>
+    <label>Thời gian tưới (phút):</label>
+    <input type="number" id="duration" required>
+    <button type="submit">Lưu</button>
+  </form>
+
+  <!-- Data Charts -->
+  <h2>Lịch sử dữ liệu</h2>
+  <canvas id="lightChart"></canvas>
+  <canvas id="distanceChart"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
